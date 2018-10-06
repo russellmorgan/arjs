@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+    <style>
+      body {
+        background: 111;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box> -->
+      <a-assets>
+        <a-asset-item id="myModelObj" src="models/monkey.obj"></a-asset-item>
+        <a-asset-item id="myModelMtl" src="models/monkey.mtl"></a-asset-item>
+      </a-assets>
+
+      <a-entity id="monkey" obj-model="obj: #myModelObj; mtl: #myModelMtl" scale="1 1 1" position="1 0.5 -4" ></a-entity>
+    </a-scene>
+  </body>
+</html>
