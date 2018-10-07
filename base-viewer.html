@@ -1,6 +1,8 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
+    <title>A-FRAME!</title>
     <style>
       body {
         background: #000;
@@ -8,20 +10,9 @@
         padding: 0;
         overflow: 0
       }
-      section {
-        position: relative;
-        z-index: 100;
-        background: #eee;
-        padding: 20px;
-      }
     </style>
   </head>
   <body>
-    <section>
-      <button id="m1">Centurion</button>
-      <button id="m2">Microphone</button>
-      <button id="m3">Drone</button>
-    </section>
     <a-scene vr-mode-ui="enabled: false">
 
       <a-assets>
@@ -36,23 +27,12 @@
 
       <a-entity visible="false" gltf-model="#centurion" rotation="0 180 0" scale="0.5 0.5 0.5" position="1 0 -1.5"></a-entity>
       <a-entity visible="false" gltf-model="#mic" rotation="0 180 0" scale="0.5 0.5 0.5" position="-1 0 -1.5"></a-entity>
-      <a-entity visible="true" gltf-model="#drone" rotation="0 180 0" scale="0.5 0.5 0.5" position="0 0 -1.5"></a-entity>
+      <a-entity animation-mixer="clip: busterDrone;" visible="true" gltf-model="#drone" rotation="0 180 0" scale="0.5 0.5 0.5" position="0 0 -1.5"></a-entity>
 
       <a-entity camera look-controls wasd-controls></a-entity>
 
     </a-scene>
 
-    <script>
-      const changeModel = (e) => {
-        let model1 = document.querySelector("#drone");
-        console.log(model1);
-      }
-
-      document.getElementById("m1").addEventListener("click", changeModel, false);
-      document.getElementById("m2").addEventListener("click", changeModel, false);
-      document.getElementById("m2").addEventListener("click", changeModel, false);
-
-    </script>
   </body>
 </html>
 

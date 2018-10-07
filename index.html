@@ -2,7 +2,7 @@
   <head>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
-    <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
     <style>
       body {
         background: #000;
@@ -28,7 +28,7 @@
     
           <a-entity visible="false" gltf-model="#centurion" rotation="0 180 0" scale="1 1 1 " position="1 0 -1.5"></a-entity>
           <a-entity visible="false" gltf-model="#mic" rotation="0 180 0" scale="1 1 1 " position="-1 0 -1.5"></a-entity>
-          <a-entity visible="true" gltf-model="#drone" rotation="0 180 0" scale="1 1 1" position="0 0 -1.5"></a-entity>
+          <a-entity visible="true" animation-mixer="clip: busterDrone;" gltf-model="#drone" rotation="0 180 0" scale="1 1 1" position="0 0 -1.5"></a-entity>
 
       <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
